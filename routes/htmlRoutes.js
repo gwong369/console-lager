@@ -17,7 +17,9 @@ module.exports = function (app) {
       where: { 
         id: req.params.id 
       } 
-    }).then(function (dbExample) {
+    }).then(function (
+      dbExample
+    ) {
       res.render("example", {
         example: dbExample
       });

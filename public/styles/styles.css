@@ -1,3 +1,14 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+.logo {
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+}
+
+#logo {
+  
+}
