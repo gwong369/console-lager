@@ -8,23 +8,23 @@ module.exports = function (app) {
   });
 
   //Load login page
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "../views/login.html"));
-});
+  app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/login.html"));
+  });
 
   //Load feed page
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "../views/feed.html"));
-});
+  app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/feed.html"));
+  });
 
   //Load profile page
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "../views/profile.html"));
-});
+  app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/profile.html"));
+  });
 
   //Load index page
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "../views/index.html"));
-});
+  app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/index.html"));
+  });
 
 };
