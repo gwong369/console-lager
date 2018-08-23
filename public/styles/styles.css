@@ -2,13 +2,93 @@
   line-height: 2.5;
 }
 
-.logo {
+#brand {
   font-family: 'Righteous', cursive;
-  text-align: center;
   padding: 10px;
-  background-color: black;
+  color: #fff;
+  font-size: 20pt;
 }
 
-#logo {
-  
+#nav-link {
+  padding: 10px;
+}
+
+
+.bg {
+  background-image: url(../assets/background.jpg);
+  /* width: auto; */
+  background-repeat: no-repeat;
+  height: auto;
+  background-position: center top;
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+}
+
+h2 {
+  font-family: 'Roboto';
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+p {
+  font-family: 'Roboto';
+}
+
+#floatbox {
+  background-color: rgba(49, 49, 49, 0.521);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+#signin {
+  background-color: rgba(49, 49, 49, 0.521);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  padding: 20px;
+}
+
+.btn {
+  margin: 10px;
+  width: 120px;
+}
+
+.profile {
+  background-color: rgb(202, 202, 202);
+  padding: 10px;
+}
+
+.profile-image {
+  text-align: center;
+  width: 250px;
+  height: 250px;
+}
+
+.profile-info {
+  margin-left: 20px; 
+}
+
+.items-lists {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    align-content: center;
+  }
+  .profile-image {
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }
+  .profile-info {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0px;
+  }
 }
