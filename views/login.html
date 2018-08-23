@@ -40,18 +40,17 @@
     </nav>
     <div class="container">
 
-        <div class="jumbotron jumbotron-fluid" id="floatbox">
-            <div class="container">
-                <h1>Welcome to Your NeighborGoods</h1>
-                <p>A place where you and your neighbors can easily borrow and share items.</p>
-                <div>
-                    <a type="button" class="btn btn-success" href="login.html">Log In</a>
-                </div>
-                <div>
-                    <a type="button" class="btn btn-success" href="create.html">Sign Up</a>
-                </div>
+        <form id="signin">
+            <div class="form-group">
+                <label for="exampleInputEmail1" style="font-family: 'Righteous';">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
-        </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1" style="font-family: 'Righteous';">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <a type="submit" class="btn btn-success">Sign In</a>
+        </form>
 
     </div>
 </body>
