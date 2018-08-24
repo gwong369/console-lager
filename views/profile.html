@@ -68,60 +68,58 @@
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Your Items</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#menu1" role="tab" aria-controls="menu1" aria-selected="false">Borrowed Items</a>
+                    <a class="nav-link" id="borrowed-tab" data-toggle="tab" href="#menu1" role="tab" aria-controls="menu1" aria-selected="false">Borrowed</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="add-item-tab" data-toggle="tab" href="#menu2" role="tab" aria-controls="menu2" aria-selected="false">Add Item</a>
                 </li>
             </ul>
             <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
-                    <a type="submit" class="btn btn-success" href="newitem.html">Add Item</a>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Item</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Availability</th>
-                                <th scope="col">Borrowed By</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Chainsaw</td>
-                                <td>Tools</td>
-                                <td>Available</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Lawn mower</td>
-                                <td>Lawn</td>
-                                <td>Not Available</td>
-                                <td>Frank Taco</td>
-                            </tr>
-                            <tr>
-                                <td>Snowboard</td>
-                                <td>Sporting Goods</td>
-                                <td>Available</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div id="home" class="tab-pane fade active">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Item name</h5>
+                            <p class="card-text">Description</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Category:</li>
+                            <li class="list-group-item">Borrowed by:</li>
+                            <li class="list-group-item">Availability:</li>
+                        </ul>
+                    </div>
                 </div>
                 <div id="menu1" class="tab-pane fade">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Item</th>
-                                <th scope="col">From</th>
-                                <th scope="col">Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Belt sander</td>
-                                <td>Eric Neff</td>
-                                <td>8/22/18</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Item name</h5>
+                            <p class="card-text">Description</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Category:</li>
+                            <li class="list-group-item">Borrowed from:</li>
+                            <li class="list-group-item">Date borrowed:</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="menu2" class="tab-pane fade">
+                    <form>
+                        <div class="form-group">
+                            <label style="font-family: 'Righteous';">Item Name</label>
+                            <input type="text" class="form-control" id="item">
+                        </div>
+                        <div class="form-group">
+                            <label style="font-family: 'Righteous';">Description</label>
+                            <input type="text" class="form-control" id="description">
+                        </div>
+                        <div class="form-group">
+                            <label style="font-family: 'Righteous';" for="category">Select Category:</label>
+                            <select class="custom-select" id="category">
+                            </select>
+                        </div>
+                        <div class="form-group" style="text-align: center;">
+                            <a type="submit" class="btn btn-success" style="align-content: center;">Add Item</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
