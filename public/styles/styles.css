@@ -15,7 +15,7 @@
 
 
 .bg {
-  background-image: url(../assets/background.jpg);
+  background-image: url("../assets/background.jpg");
   /* width: auto; */
   background-repeat: no-repeat;
   height: auto;
