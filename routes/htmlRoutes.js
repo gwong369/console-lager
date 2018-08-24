@@ -7,6 +7,10 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../views/index.html"));
   });
 
+  app.get("/index", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/index.html"));
+  });
+
   //Load login page
   app.get("/login", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/login.html"));
