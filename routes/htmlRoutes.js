@@ -3,6 +3,7 @@ var path = require("path");
 var authenticaton = require("authentication.js");
 var passport = require("passport");
 var localStrat= require("passport-local");
+var passportConfig = require("./config/passportConfig");
 
 module.exports = function(app) {
   // Load index page
@@ -24,7 +25,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../views/login.html"));
   });
 
-  app.get("/logout", authenticaton.destroySession)
+  app.get("/logout", authenticaton.destroySession);
 
   //Load feed page
   app.get("/feed", authenticaton.isAuthenticated, function(req, res) {
