@@ -1,9 +1,9 @@
 // var db = require("../models");
 var path = require("path");
-var authenticaton = require("authentication.js");
+var authenticaton = require("./athentication");
 var passport = require("passport");
 var localStrat= require("passport-local");
-var passportConfig = require("./config/passportConfig");
+var passportConfig = require("../config/passportConfig");
 
 module.exports = function(app) {
   // Load index page

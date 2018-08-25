@@ -1,7 +1,3 @@
-// Dependencies
-// =============================================================
-
-
 module.exports = function(sequelize, DataTypes) {
 // Creates a "Items" model that matches up with DB
   var Users = sequelize.define("users", {
