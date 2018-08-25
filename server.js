@@ -1,6 +1,9 @@
 // require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
+var http = require("http");
+var passport = require("passport");
+var passportConfig = require("./config/passportConfig");
 
 var db = require("./models");
 
