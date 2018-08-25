@@ -4,7 +4,7 @@ $(document).ready(function () {
     var itemDescription = $("#description");
     var category = $("#category");
     var itemsContainer = $("#home");
-    var borrowedContainer = $("menu1")
+    var borrowedContainer = $("#menu1")
     // Adding event listeners to the form to create a new object, and the button to delete
     // an items
     $(document).on("submit", newItemSubmit);
