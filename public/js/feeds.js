@@ -9,7 +9,7 @@ $(document).ready(function () {
   function createItemRow(itemData) {
     var newCard = $("<div class='card item'>");
     newCard.data("items", itemData);
-    newCard.append("<div class='card-body'><h5 class='card-title'>Item name</h5><p class='card-text'>" + itemData.itemDescription + "</p></div><ul class='list-group list-group-flush'><li class='list-group-item'>" + itemData.category + "</li><li class='list-group-item'>" + itemData.lendee + "</li><li class='list-group-item'>" + itemDate.available + "</li></ul></div>");
+    newCard.append("<div class='card-body'><h5 class='card-title'>" + "Item name: " + itemData.itemName + "</h5><p class='card-text'>" + "Description: " + itemData.itemDescription + "</p></div><ul class='list-group list-group-flush'><li class='list-group-item'>" + "Category: " + itemData.category + "</li><li class='list-group-item'>" + "Borrwed by: " + itemData.lendee + "</li><li class='list-group-item'>" + "Availability: " + itemData.available + "</li></ul></div>");
     return newCard;
   }
 
