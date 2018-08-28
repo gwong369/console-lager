@@ -9,7 +9,7 @@ $(document).ready(function () {
   var borrowedContainer = $("#menu1");
   // Adding event listeners to the form to create a new object, and the button to delete
   // an items
-  $(document).on("submit", ".item-form", newItemSubmit);
+  $(document).on("submit", "#item-form", newItemSubmit);
 
   // Getting the initial list of itemss
   getItems();
@@ -41,7 +41,7 @@ $(document).ready(function () {
   function createItemRow(itemData) {
     var newCard = $("<div class='card item'>");
     newCard.data("items", itemData);
-    newCard.append("<div class='card-body'><h5 class='card-title'>Item name</h5><p class='card-text'>" + itemData.itemDescription + "</p></div><ul class='list-group list-group-flush'><li class='list-group-item'>" + itemData.category + "</li><li class='list-group-item'>" + itemData.lendee + "</li><li class='list-group-item'>" + itemData.available + "</li></ul></div>");
+    newCard.append("<div class='card-body'><h5 class='card-title'>" + itemData.itemName + "</h5><p class='card-text'>" + itemData.itemDescription + "</p></div><ul class='list-group list-group-flush'><li class='list-group-item'>" + itemData.category + "</li></ul></div>");
     return newCard;
   }
 

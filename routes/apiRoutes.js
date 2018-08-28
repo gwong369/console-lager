@@ -23,6 +23,17 @@ module.exports = function (app) {
       });
   });
 
+  app.get("/api/items", function (req, res) {
+    db.items.findOne({
+      where: {
+        id: 1
+      }
+    })
+      .then(function (dbUsers) {
+        res.json(dbUsers);
+      });
+  });
+
   app.get("/api/users/lender", function (req, res) {
     db.items.findAll({
       where: {
@@ -49,7 +60,7 @@ module.exports = function (app) {
   // POST route for saving a new user to the database
   app.post("/api/users", function (req, res) {
     console.log(req.body);
-    db.Users.create({
+    db.users.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
@@ -78,6 +89,12 @@ module.exports = function (app) {
         res.json(dbitems);
       });
   });
+
+  // app.post("/api/items", function(req, res) {
+  //   db.items.create(req.body).then(function(dbItems) {
+  //     res.json(dbItems);
+  //   });
+  // });
 
 
 

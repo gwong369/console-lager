@@ -1,2 +1,0 @@
-INSERT INTO items (itemName, lender, lendee, itemDescription, category, available) VALUES ("Lawn mower", "Fred", "", "Make your lawn pretty", "Lawn/Garden", true);
-INSERT INTO items (itemName, lender, lendee, itemDescription, category, available) VALUES ("City bike", "Jimbo", "Nick", "Ride around town", "Hobby", false);
