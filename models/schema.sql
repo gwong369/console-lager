@@ -1,5 +1,6 @@
-DROP DATABASE IF EXISTS neighborGoods;
-CREATE DATABASE neighborGoods;
+DROP DATABASE IF EXISTS neighborgoods;
+CREATE DATABASE neighborgoods;
+USE neighborgoods;
 
 -- CREATE TABLE users
 -- (
@@ -14,14 +15,13 @@ CREATE DATABASE neighborGoods;
 -- 	PRIMARY KEY (id)
 -- );
 
--- CREATE TABLE items
--- (
+-- CREATE TABLE items (
 -- 	id int NOT NULL AUTO_INCREMENT,
 -- 	itemName varchar(255) NOT NULL,
 --     lender varchar(255) NOT NULL,
 --     lendee varchar(255),
---     itemDescription varchar(255) NOT NULL,
---     category varchar(255) NOT NULL
+--    itemDescription varchar(255) NOT NULL,
+--     category varchar(255) NULL,
 --     available BOOLEAN NOT NULL,
 -- 	PRIMARY KEY (id)
 -- );
