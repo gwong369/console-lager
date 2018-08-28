@@ -20,6 +20,8 @@ module.exports = function(sequelize, DataTypes) {
     // the image url of the user (a string)
     imageURL: DataTypes.STRING,
     
+  }, {
+    timestamps: false
   });
 
   return Users;

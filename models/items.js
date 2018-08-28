@@ -15,6 +15,8 @@ module.exports = function(sequelize, DataTypes) {
     category: DataTypes.STRING,
     // the item's description (a string)
     available: DataTypes.BOOLEAN
+  }, {
+    timestamps: false
   });
 
   return Items;
