@@ -3,51 +3,51 @@ var db = require("../models");
 module.exports = function (app) {
   // FEED
   // GET route for getting all of the items 
-  app.get("/api/items/", function(req, res) {
-    db.Items.findAll({})
-      .then(function(dbItems) {
-        res.json(dbItems);
+  app.get("/api/items", function (req, res) {
+    db.items.findAll({})
+      .then(function (dbitems) {
+        res.json(dbitems);
       });
   });
 
   //PROFILE
   // Get route for retrieving a single user from users table
-  app.get("/api/users/", function(req, res) {
+  app.get("/api/users", function (req, res) {
     db.Users.findOne({
       where: {
         id: 1
       }
     })
-      .then(function(dbUsers) {
+      .then(function (dbUsers) {
         res.json(dbUsers);
       });
   });
 
-  app.get("/api/users/lender", function(req, res) {
-    db.Items.findAll({
+  app.get("/api/users/lender", function (req, res) {
+    db.items.findAll({
       where: {
         lender: 1
       }
     })
-      .then(function(dbItems) {
-        res.json(dbItems);
+      .then(function (dbitems) {
+        res.json(dbitems);
       });
   });
 
-  app.get("/api/users/lendee", function(req, res) {
-    db.Items.findAll({
+  app.get("/api/users/lendee", function (req, res) {
+    db.items.findAll({
       where: {
         lendee: 1
       }
     })
-      .then(function(dbItems) {
-        res.json(dbItems);
+      .then(function (dbitems) {
+        res.json(dbitems);
       });
   });
 
 
   // POST route for saving a new user to the database
-  app.post("/api/users", function(req, res) {
+  app.post("/api/users", function (req, res) {
     console.log(req.body);
     db.Users.create({
       firstName: req.body.firstName,
@@ -58,15 +58,15 @@ module.exports = function (app) {
       community: req.body.community,
       imageURL: req.body.imageURL
     })
-      .then(function(dbUsers) {
+      .then(function (dbUsers) {
         res.json(dbUsers);
       });
   });
 
   // POST route for saving a new item to the database
-  app.post("/api/items", function(req, res) {
+  app.post("/api/items", function (req, res) {
     console.log(req.body);
-    db.Items.create({
+    db.items.create({
       itemName: req.body.itemName,
       lender: req.body.lender,
       lendee: req.body.lendee,
@@ -74,8 +74,8 @@ module.exports = function (app) {
       category: req.body.category,
       available: req.body.available
     })
-      .then(function(dbItems) {
-        res.json(dbItems);
+      .then(function (dbitems) {
+        res.json(dbitems);
       });
   });
 
