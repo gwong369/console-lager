@@ -9,7 +9,7 @@ $(document).ready(function () {
   var borrowedContainer = $("#menu1");
   // Adding event listeners to the form to create a new object, and the button to delete
   // an items
-  $(document).on("submit", newItemSubmit);
+  $(document).on("submit", ".item-form", newItemSubmit);
 
   // Getting the initial list of itemss
   getItems();
@@ -19,14 +19,14 @@ $(document).ready(function () {
   function newItemSubmit(event) {
     event.preventDefault();
     // Don't do anything if the name fields hasn't been filled out
-    if (!itemName.val().trim()) {
+    if (!itemName.val().trim().trim()) {
       return;
     }
     // Calling the upsertitems function and passing in the value of the name input
     upsertItem({
-      itemName: itemName.val(),
-      itemDescription: itemDescription.val(),
-      category: category.val()
+      itemName: itemName.val().trim(),
+      itemDescription: itemDescription.val().trim(),
+      category: category.val().trim()
     });
   }
 
