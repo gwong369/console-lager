@@ -13,7 +13,7 @@ module.exports = function (app) {
   //PROFILE
   // Get route for retrieving a single user from users table
   app.get("/api/users", function (req, res) {
-    db.Users.findOne({
+    db.users.findOne({
       where: {
         id: 1
       }

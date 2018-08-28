@@ -3,8 +3,8 @@ $(document).ready(function () {
   var itemName = $("#item");
   var itemDescription = $("#description");
   var category = $("#category");
-  var itemsList = $(".card items");
-  var borrowList = $(".card borrow");
+  var itemsList = $(".card.items");
+  var borrowList = $(".card.borrow");
   var itemsContainer = $("#home");
   var borrowedContainer = $("#menu1");
   // Adding event listeners to the form to create a new object, and the button to delete
@@ -24,14 +24,15 @@ $(document).ready(function () {
     }
     // Calling the upsertitems function and passing in the value of the name input
     upsertItem({
-      itemName: itemName,
-      itemDescription: itemDescription,
-      category: category
+      itemName: itemName.val(),
+      itemDescription: itemDescription.val(),
+      category: category.val()
     });
   }
 
   // A function for creating an items. Calls getItems upon completion
   function upsertItem(itemData) {
+    console.log(itemData);
     $.post("/api/items", itemData)
       .then(getItems);
   }
