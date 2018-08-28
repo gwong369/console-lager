@@ -1,20 +1,20 @@
-module.exports = function(sequelize, DataTypes) {
-// Creates a "Items" model that matches up with DB
+module.exports = function(sequelize, Sequelize) {
+// Creates a "Users" model that matches up with DB
   var Users = sequelize.define("users", {
     // the first name of the user (a string)
-    firstName: DataTypes.STRING,
+    firstName: Sequelize.STRING,
     // the last name of the user (a string)
-    lastName: DataTypes.STRING,
+    lastName: Sequelize.STRING,
     // the email of the user (a string)
-    email: DataTypes.STRING,
+    email: Sequelize.STRING,
     // the phone # of the user (a string)
-    phone: DataTypes.INTEGER,
+    phone: Sequelize.INTEGER,
     // the password of the user (a string)
-    userPassword: DataTypes.STRING,
+    userPassword: Sequelize.STRING,
     // the community the user is in (a string)
-    community: DataTypes.STRING,
+    community: Sequelize.STRING,
     // the image url of the user (a string)
-    imageURL: DataTypes.STRING,
+    imageURL: Sequelize.STRING,
     
   });
 

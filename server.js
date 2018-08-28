@@ -3,7 +3,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var http = require("http");
 var passport = require("passport");
-var passportConfig = require("./config/passportConfig");
+var LocalStrategy = require("passport-local").Strategy;
+var session = require("express-session");
 
 var db = require("./models");
 
@@ -15,9 +16,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
+app.use(session({ secret: "keyboard cat",resave: true, saveUninitialized:true}));
+ 
+app.use(passport.initialize());
+ 
+app.use(passport.session());
+
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes/apiRoutes")(app, db);
+require("./routes/htmlRoutes")(app, passport);
+
+var passportConfig = require("./config/passport")(passport, db.users);
 
 var syncOptions = { force: false };
 

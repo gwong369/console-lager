@@ -42,7 +42,7 @@
     </nav>
     <div class="container">
 
-        <form id="signin">
+        <form id="signup">
             <div class="form-group">
                 <div class="row">
                     <div class="col">
@@ -77,11 +77,27 @@
                 <input type="text" class="form-control" id="confirm">
             </div>
             <div class="form-group" style="text-align: center;">
-                <a type="submit" class="btn btn-success" style="align-content: center;">Sign Up</a>
+                <a type="submit" class="btn btn-success" id="submitBtn" style="align-content: center;">Sign Up</a>
             </div>
         </form>
 
     </div>
 </body>
+<script>
+    $(document).ready(function () {
+        $("#submitBtn").click(function(event) {
+            event.preventDefault();
+                console.log("Pressed")
+                $.post("/signup", function() {                
+            });
+        });
+        $("#submitBtn").click(function(event) {
+            event.preventDefault();
+                $.post("/api/users", function() {                
+            });
+        });
 
+
+    });
+</script>
 </html>

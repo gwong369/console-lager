@@ -3,15 +3,20 @@ var path = require("path");
 var authenticaton = require("./athentication");
 var passport = require("passport");
 var localStrat= require("passport-local");
-var passportConfig = require("../config/passportConfig");
+var passportConfig = require("../config/passport");
 
-module.exports = function(app) {
+module.exports = function(app, passport) {
   // Load index page
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/index.html"));
   });
 
-  app.post("/authenticate", passport.authenticate("local", {
+  app.post("/signup", passport.authenticate("local-signup",  { 
+    successRedirect: "/login",
+    failureRedirect: "/create"}
+  ));
+
+  app.post("/authenticate", passport.authenticate("local-login", {
     successRedirect: "/profile",
     failureRedirect: "/login"
   }));
